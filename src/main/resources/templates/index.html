@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+首页来l<br/>
+<span th:text="${key}"></span>
+
+<table border="1">
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>address</td>
+    </tr>
+
+    <tr th:each="user : ${users}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.address}"></td>
+    </tr>
+
+    <tr>
+        <td colspan="3"><a href="/">添加用户</a></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
